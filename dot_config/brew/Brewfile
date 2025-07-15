@@ -1,0 +1,45 @@
+# Taps
+tap "mutagen-io/mutagen"
+tap "lucaspickering/tap"
+
+# Brews
+brew "slumber"
+brew "jd"
+brew "rainfrog"
+brew "tabiew"
+brew "frotz"
+brew "postgresql@17"
+brew "git"
+brew "gh"
+brew "helix"
+brew "fish"
+brew "wget"
+brew "yazi"
+brew "atuin"
+brew "bottom"
+brew "fzf"
+brew "fd"
+brew "bat"
+brew "jq"
+brew "lazygit"
+brew "ripgrep"
+brew "go"
+brew "zoxide"
+
+# Casks
+cask "firefox"
+cask "google-chrome"
+cask "orbstack"
+cask "ghostty"
+cask "obsidian"
+cask "raycast"
+cask "sketch"
+cask "tableplus"
+cask "zed"
+cask "proton-mail-bridge"
+cask "font-jetbrains-mono"
+
+# Mac App Store Apps (mas)
+mas "Tailscale", id: 1475387142
+mas "Ghostery Privacy Ad Blocker", id: 6504861501
+mas "Proton Pass for Safari", id: 6502835663

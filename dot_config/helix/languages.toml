@@ -1,0 +1,166 @@
+[[language]]
+auto-format = true
+language-servers = ["typescript-language-server"]
+name = "javascript"
+
+[language.formatter]
+args = ["--stdin", "--parser", "babel"]
+command = "/nix/store/ri1x9kwnv6a38lycpx03fm8g1xx5r41s-prettier-3.5.3/bin/prettier"
+
+[[language]]
+auto-format = true
+language-servers = ["typescript-language-server"]
+name = "typescript"
+
+[language.formatter]
+args = ["--stdin", "--parser", "typescript"]
+command = "/nix/store/ri1x9kwnv6a38lycpx03fm8g1xx5r41s-prettier-3.5.3/bin/prettier"
+
+[[language]]
+auto-format = true
+language-servers = ["typescript-language-server"]
+name = "tsx"
+
+[language.formatter]
+args = ["--stdin", "--parser", "typescript"]
+command = "/nix/store/ri1x9kwnv6a38lycpx03fm8g1xx5r41s-prettier-3.5.3/bin/prettier"
+
+[[language]]
+auto-format = true
+language-servers = ["typescript-language-server"]
+name = "jsx"
+
+[language.formatter]
+args = ["--stdin", "--parser", "babel"]
+command = "/nix/store/ri1x9kwnv6a38lycpx03fm8g1xx5r41s-prettier-3.5.3/bin/prettier"
+
+[[language]]
+auto-format = true
+language-servers = ["html-language-server"]
+name = "html"
+
+[language.formatter]
+args = ["--stdin", "--parser", "html"]
+command = "/nix/store/ri1x9kwnv6a38lycpx03fm8g1xx5r41s-prettier-3.5.3/bin/prettier"
+
+[[language]]
+auto-format = true
+language-servers = ["css-language-server"]
+name = "css"
+
+[language.formatter]
+args = ["--stdin", "--parser", "css"]
+command = "/nix/store/ri1x9kwnv6a38lycpx03fm8g1xx5r41s-prettier-3.5.3/bin/prettier"
+
+[[language]]
+auto-format = true
+language-servers = ["json-language-server"]
+name = "json"
+
+[language.formatter]
+args = ["--stdin", "--parser", "json"]
+command = "/nix/store/ri1x9kwnv6a38lycpx03fm8g1xx5r41s-prettier-3.5.3/bin/prettier"
+
+[[language]]
+auto-format = true
+language-servers = ["rust-analyzer"]
+name = "rust"
+
+[language.formatter]
+command = "/nix/store/j4i9hn4bf821sqrq7xx57d1725zs68cs-rustfmt-1.85.0/bin/rustfmt"
+
+[[language]]
+auto-format = true
+language-servers = ["gopls"]
+name = "go"
+
+[language.formatter]
+command = "/nix/store/jp3z5jp9gaxsw7fdzbqn29aabmrxq62j-go-1.24.1/bin/gofmt"
+
+[[language]]
+auto-format = true
+language-servers = ["nil"]
+name = "nix"
+
+[[language]]
+auto-format = true
+name = "markdown"
+
+[language.formatter]
+args = ["--stdin", "--parser", "markdown"]
+command = "/nix/store/ri1x9kwnv6a38lycpx03fm8g1xx5r41s-prettier-3.5.3/bin/prettier"
+
+[[language]]
+auto-format = true
+name = "yaml"
+
+[language.formatter]
+args = ["--stdin", "--parser", "yaml"]
+command = "/nix/store/ri1x9kwnv6a38lycpx03fm8g1xx5r41s-prettier-3.5.3/bin/prettier"
+
+[language-server.css-language-server]
+args = ["--stdio"]
+command = "/nix/store/gzvvic8kk3nwdx75vsacmr2h7hvy4z7v-vscode-langservers-extracted-4.10.0/bin/vscode-css-language-server"
+
+[language-server.gopls]
+command = "/nix/store/h22v0brf9kmms9jz3fg4wlll1jbxpa9r-gopls-0.18.1/bin/gopls"
+
+[language-server.gopls.config]
+completionDocumentation = true
+deepCompletion = true
+linksInHover = true
+staticcheck = true
+usePlaceholders = true
+[language-server.gopls.config.analyses]
+shadow = true
+unusedparams = true
+
+[language-server.html-language-server]
+args = ["--stdio"]
+command = "/nix/store/gzvvic8kk3nwdx75vsacmr2h7hvy4z7v-vscode-langservers-extracted-4.10.0/bin/vscode-html-language-server"
+
+[language-server.json-language-server]
+args = ["--stdio"]
+command = "/nix/store/gzvvic8kk3nwdx75vsacmr2h7hvy4z7v-vscode-langservers-extracted-4.10.0/bin/vscode-json-language-server"
+
+[language-server.nil]
+command = "/nix/store/1vv2j61c8c97k3mdbcap5wa46jzyhi82-nil-2024-08-06/bin/nil"
+
+[language-server.nil.config.formatting]
+command = ["/nix/store/m6p3ysrlaxa57iaxjv1mi5ab79pankvk-nixpkgs-fmt-1.3.0/bin/nixpkgs-fmt"]
+
+[language-server.prettier]
+args = ["--stdin-filepath", "{}"]
+command = "/nix/store/ri1x9kwnv6a38lycpx03fm8g1xx5r41s-prettier-3.5.3/bin/prettier"
+
+[language-server.rust-analyzer]
+command = "/nix/store/wn315xaxwa6vi0nbaawdcr9gby5r97pj-rust-analyzer-2025-03-31/bin/rust-analyzer"
+
+[language-server.rust-analyzer.config]
+checkOnSave = true
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+extraArgs = ["--", "-W", "clippy::all"]
+
+[language-server.rust-analyzer.config.inlayHints.parameterHints]
+enable = true
+
+[language-server.rust-analyzer.config.inlayHints.typeHints]
+enable = true
+
+[language-server.rust-analyzer.config.procMacro]
+enable = true
+
+[language-server.typescript-language-server]
+args = ["--stdio"]
+command = "/nix/store/739df6xbkbmw78d58hm7wwjwnn9n5ds0-typescript-language-server-4.3.3/bin/typescript-language-server"
+
+[language-server.typescript-language-server.config.completions]
+autoImportSuggestions = true
+completeFunctionCalls = true
+
+[language-server.typescript-language-server.config.diagnostics]
+enable = true
+
+[language-server.typescript-language-server.config.format]
+enable = true

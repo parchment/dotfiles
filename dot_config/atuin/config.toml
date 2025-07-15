@@ -1,0 +1,9 @@
+auto_sync = true
+filter_mode_shell_up_key_binding = "directory"
+history_filter = ["^ls$", "^cd .*", "^exit$"]
+search_mode = "fuzzy"
+show_preview = true
+style = "compact"
+sync_address = "https://api.atuin.sh"
+sync_frequency = "5m"
+timezone = "local"

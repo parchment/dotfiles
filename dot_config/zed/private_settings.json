@@ -1,0 +1,27 @@
+{
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "terminal": {
+    "dock": "left",
+    "font_family": "JetBrains Mono"
+  },
+  "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    },
+    "version": "2"
+  },
+  "ui_font_size": 16,
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 14.0,
+  "preferred_line_length": 80,
+  "soft_wrap": "preferred_line_length",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark"
+  }
+}
