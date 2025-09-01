@@ -1,0 +1,34 @@
+#!/bin/sh
+
+if [ "{{ .chezmoi.os }}" = "darwin" ]; then
+  BREWFILE="$HOME/.config/brew/Brewfile"
+
+  if ! brew list mas >/dev/null 2>&1; then
+    brew install mas
+  fi
+
+  brew bundle --file="$BREWFILE"
+
+  sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+  chsh -s /opt/homebrew/bin/fish
+
+  curl https://sh.rustup.rs -sSf | sh
+  curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+  ya pkg -a yazi-rs/plugins:full-border
+
+elif [ "{{ .chezmoi.os }}" = "linux" ]; then
+  sudo pacman -Syu --noconfirm \
+    git helix fish wget yazi atuin bottom nodejs pnpm fzf fd bat jq lazygit ripgrep go zoxide postgresql \
+    firefox chromium obsidian tableplus zed
+
+  # Set fish as default shell
+  command -v fish | sudo tee -a /etc/shells
+  chsh -s $(command -v fish)
+
+  # Rust
+  curl https://sh.rustup.rs -sSf | sh
+  curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+
+  # Yazi plugin
+  ya pkg -a yazi-rs/plugins:full-border
+fi
